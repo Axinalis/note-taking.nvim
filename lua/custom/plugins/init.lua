@@ -25,4 +25,17 @@ return {
       vim.cmd.colorscheme 'everforest'
     end,
   },
+  {
+    'vimwiki/vimwiki',
+    lazy = false,
+    init = function()
+      vim.g.vimwiki_list = {
+        {
+          path = '~/projects/myWiki',
+          syntax = 'default',
+          ext = '.md',
+        },
+      }
+    end,
+  },
 }
