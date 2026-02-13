@@ -4,17 +4,6 @@
 -- See the kickstart.nvim README for more information
 return {
   {
-    'rest-nvim/rest.nvim',
-    lazy = false,
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter',
-      opts = function(_, opts)
-        opts.ensure_installed = opts.ensure_installed or {}
-        table.insert(opts.ensure_installed, 'http')
-      end,
-    },
-  },
-  {
     'sainnhe/everforest',
     lazy = false,
     priority = 1000,
@@ -24,6 +13,14 @@ return {
       vim.g.everforest_enable_italic = true
       vim.cmd.colorscheme 'everforest'
     end,
+  },
+  { 
+    "ellisonleao/gruvbox.nvim", 
+    priority = 1, 
+    config = true, 
+    opts = {
+
+    }
   },
   {
     'vimwiki/vimwiki',
